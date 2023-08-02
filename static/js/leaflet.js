@@ -9,7 +9,7 @@ btn.addEventListener("click", function() {
 
 
     // Search DB for zipcode match/Return coordinates and zoom to position
-    d3.json('input/us_zips.json').then(function(zipData) {
+    d3.json('input/us_zip.json').then(function(zipData) {
         for (let i = 0; i < zipData.length; i++) {
             if (zipData[i].zip === zipRead) {
                 myMap.flyTo([zipData[i].lat, zipData[i].lon], 13);
